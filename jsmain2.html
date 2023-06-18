@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmlmain</title>
+    <link rel="stylesheet" href="final_js.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <!-- -----------상단 메뉴 시작------------------------- -->
+            <div id="alramtop">
+                <div class="toptopcontainer">
+                    <div class="toptopcontent">
+                        <span class="sentence">소프트웨어 개발 실습1 기말 과제 곧 마감!!</span>
+                        <span class="sentence">기간 ~6/19 제출페이지&nbsp;&nbsp;<a href="https://canvas.dongseo.ac.kr/courses/27711/discussion_topics/213481">e-class</a></span>                   
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="top_menu">
+                <div id="top-wrap">
+                    <a href="./mainmain.html"><img src="./myload.png" title="Home" width="80px"></a>  
+                    <nav>
+                        <ul class="innavul">
+                            <li class="innavulli"><a href="htmlmain.html">HTML</a>
+                                <ul>
+                                    <li><a href="htmlmain.html">html1</a></li>
+                                    <li><a href="htmlmain2.html">html2</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li class="innavulli"><a href="cssmain.html">CSS</a>
+                                <ul>
+                                    <li><a href="cssmain.html">css1</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li  class="innavulli"><a href="jsmain.html">Java Script</a>
+                                <ul>
+                                    <li><a href="jsmain.html">js1</a></li>
+                                    <li><a href="jsmain2.html">js2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-container">
+                        <input type="text" placeholder="검색" class="search-input">
+                        <button class="search-button">
+                            <img src="search.png" id="searchimage"  width="30px">
+                        <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+            <!-- ---------------------end of #header ----------------    -->
+        
+        <div id="root">
+            <div id="container">
+            
+            <div id="left-container">
+            
+            </div>
+            <div id="result"></div> <!-- 결과를 출력할 공간 -->
+            
+            <script> 
+            const sentences = document.querySelectorAll('.sentence');
+            let index = 0;
+
+            function showNextSentence() {
+                sentences.forEach(sentence => {
+                sentence.classList.remove('active');
+            });
+
+                sentences[index].classList.add('active');
+                index = (index + 1) % sentences.length;
+            }
+
+            function startAnimation() {
+                showNextSentence();
+                setInterval(showNextSentence, 3000);
+            }
+
+            startAnimation();
+            //----------------------------------------
+            const name = prompt("내게 묻는다면?:");
+            const pw = prompt("암호는?:");
+
+            if (name == "왈도" && pw == 8) {
+              document.getElementById('result').textContent = "힘세고 강한아침!";
+            } else {
+              document.getElementById('result').textContent = "STOP RIGHT THERE, criminal scum!";
+            }
+            </script>
+
+        </div>
+    </div>
+
+</body>
+</html>

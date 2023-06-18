@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./final_html.css">
+</head>
+<body>
+    <button id="button1" onclick="toggleButton1()">1번 버튼</button>
+    <button id="button2" onclick="toggleButton2()">2번 버튼</button>
+
+<script>
+    let button1Clicked = false;
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
+
+function toggleButton1() {
+    button1Clicked = !button1Clicked;
+
+    if (button1Clicked) {
+        button1.classList.add("clicked");
+    } else {
+        button1.classList.remove("clicked");
+    }
+}
+
+function toggleButton2() {
+    // button2Clicked = !button2Clicked;
+
+    if (button2Clicked) {
+        button2.classList.add("clicked");
+    } else {
+        button2.classList.remove("clicked");
+    }
+}
+
+    function toggleButton2() {
+        if (button1Clicked) {
+        alert("주의: 1번 버튼이 눌러져 있습니다!");
+        }
+    }
+    // function toggleButton1() {
+    //     if (button1Clicked) {
+    //     alert("주의: 2번 버튼이 눌러져 있습니다!");
+    //     }
+    // }
+</script>
+</body>
+</html>

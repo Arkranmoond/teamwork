@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과 페이지</title>
+    <link rel="stylesheet" href="./final_html.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <!-- -----------상단 메뉴 시작------------------------- -->
+            <div id="alramtop">
+                <div class="toptopcontainer">
+                    <div class="toptopcontent">
+                        <span class="sentence">소프트웨어 개발 실습1 기말 과제 곧 마감!!</span>
+                        <span class="sentence">기간 ~6/19 제출페이지&nbsp;&nbsp;<a href="https://canvas.dongseo.ac.kr/courses/27711/discussion_topics/213481">e-class</a></span>                   
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="top_menu">
+                <div id="top-wrap">
+                    <a href="./mainmain.html"><img src="./myload.png" title="Home" width="80px"></a>
+                    <nav>
+                        <ul class="innavul">
+                            <li class="innavulli"><a href="htmlmain.html">HTML</a>
+                                <ul>
+                                    <li><a href="htmlmain.html">1</a></li>
+                                    <li><a href="htmlmain2.html">2</a></li>
+                                    <li><a href="">3</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li class="innavulli"><a href="cssmain.html">CSS</a>
+                                <ul>
+                                    <li><a href="cssmain.html">4</a></li>
+                                    <li><a href="">5</a></li>
+                                    <li><a href="">6</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li  class="innavulli"><a href="jsmain.html">Java Script</a>
+                                <ul>
+                                    <li><a href="">7</a></li>
+                                    <li><a href="">8</a></li>
+                                    <li><a href="">9</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-container">
+                        <input type="text" placeholder="검색" class="search-input">
+                        <button class="search-button">
+                            <img src="search.png" id="searchimage"  width="30px">
+                        <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+        <!-- ---------------------end of #header ----------------    -->
+        <div id="root">
+            <div id="container">
+            
+                <div id="left-container">
+            
+                </div>
+
+                <div id="midcontainer">
+                    <h1>검색 결과</h1>
+                    <div id="search-results"></div>
+                </div>
+        
+                <div id="right-container">
+            
+                </div>
+        
+            </div>
+        </div> 
+        <div id="footer">
+        
+        </div>
+    </div>
+
+    <script>
+        const searchResultsDiv = document.getElementById('search-results');
+        const searchParams = new URLSearchParams(window.location.search);
+        const searchTerm = searchParams.get('search');
+        
+        // 여기서 검색 결과를 처리하고 출력하는 로직을 추가합니다.
+        // 예를 들어, 검색어를 기반으로 데이터베이스에서 검색하여 결과를 가져와서 표시할 수 있습니다.
+        // 이 예제에서는 단순히 검색어를 출력합니다.
+        if (searchTerm) {
+            searchResultsDiv.textContent = `검색어: ${searchTerm}`;
+        }
+    </script>
+</html>

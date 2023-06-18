@@ -1,0 +1,65 @@
+//html
+
+<button id="button1" onclick="toggleButton1()">1번 버튼</button>
+<button id="button2" onclick="toggleButton2()">2번 버튼</button>
+
+버튼 넣는 코드
+
+// js
+    let button1Clicked = false;
+const button1 = document.getElementById("button1");
+
+function toggleButton1() {
+    button1Clicked = !button1Clicked;
+
+    if (button1Clicked) {
+        button1.classList.add("clicked");
+    } else {
+        button1.classList.remove("clicked");
+    }
+}
+
+function toggleButton2() {
+    button1Clicked = !button1Clicked;
+
+    if (button1Clicked) {
+        button1.classList.add("clicked");
+    } else {
+        button1.classList.remove("clicked");
+    }
+}
+
+    function toggleButton2() {
+        if (button1Clicked) {
+        alert("주의: 1번 버튼이 눌러져 있습니다!");
+        }
+    }
+
+js로 버튼누르는거랑 1번버튼 눌러져있으면 2번버튼 눌렀을 때 알람오는거
+이걸로 나중에 태그들 버튼눌러서 효과 나오게 하는거 할 때 겹치면 안되는 것들 안겹쳐지게 만들기
+
+
+//강의 아이콘 돌아다니는것 js
+const box = document.getElementById('box');
+        box.classList.add('box');
+        // box.classList.add('bg-html');
+        
+        
+        const images = ['./pichtml.png', './piccss.png', './picjs.png'];
+        let currentImageIndex = 0;
+
+        function changeImage() {
+        box.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+        changeImage();
+        setInterval(changeImage, 3000);
+
+//
+
+오버플로우: 요소의 내용이 overflow 속성으로 관리되는 경우 스크롤을
+허용하도록 설정되어야 합니다. overflow: auto 또는
+overflow: scroll을 적용하여 내용이 요소의 영역을
+초과할 때 스크롤이 나타나도록 설정합니다.
+
+//

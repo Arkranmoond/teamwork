@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GodofRuby</title>
+    <link rel="stylesheet" href="final_js.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <!-- -----------상단 메뉴 시작------------------------- -->
+            <div id="alramtop">
+                <div class="toptopcontainer">
+                    <div class="toptopcontent">
+                        <span class="sentence">소프트웨어 개발 실습1 기말 과제 곧 마감!!</span>
+                        <span class="sentence">기간 ~6/19 제출페이지&nbsp;&nbsp;<a href="https://canvas.dongseo.ac.kr/courses/27711/discussion_topics/213481">e-class</a></span>                   
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="top_menu">
+                <div id="top-wrap">
+                    <a href="./mainmain.html"><img src="./myload.png" title="Home" width="80px"></a>  
+                    <nav>
+                        <ul class="innavul">
+                            <li class="innavulli"><a href="htmlmain.html">HTML</a>
+                                <ul>
+                                    <li><a href="htmlmain.html">html1</a></li>
+                                    <li><a href="htmlmain2.html">html2</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li class="innavulli"><a href="cssmain.html">CSS</a>
+                                <ul>
+                                    <li><a href="cssmain.html">css1</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li  class="innavulli"><a href="jsmain.html">Java Script</a>
+                                <ul>
+                                    <li><a href="jsmain.html">js1</a></li>
+                                    <li><a href="jsmain2.html">js2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-container">
+                        <input type="text" placeholder="검색" class="search-input">
+                        <button class="search-button">
+                            <img src="search.png" id="searchimage"  width="30px">
+                        <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+            <!-- ---------------------end of #header ----------------    -->
+        
+        <div id="root">
+            <div id="container">
+            
+            <div id="left-container">
+            
+            </div>
+
+            <div class="calculator">
+                <input type="text" id="display" readonly>
+                <div class="buttons">
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('+')">+</button>
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('-')">-</button>
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="appendOperator('*')">*</button>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendOperator('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendOperator('/')">/</button>
+                <button onclick="clearDisplay()">C</button>
+                </div>
+            </div>
+
+<script> 
+const sentences = document.querySelectorAll('.sentence');
+let index = 0;
+
+function showNextSentence() {
+    sentences.forEach(sentence => {
+    sentence.classList.remove('active');
+});
+
+    sentences[index].classList.add('active');
+    index = (index + 1) % sentences.length;
+}
+
+function startAnimation() {
+    showNextSentence();
+    setInterval(showNextSentence, 3000);
+}
+
+startAnimation();
+//----------------------------------------
+let currentExpression = '';
+const display = document.getElementById('display');
+
+function appendNumber(number) {
+    currentExpression += number;
+    display.value = currentExpression;
+}
+
+function appendOperator(operator) {
+    currentExpression += operator;
+    display.value = currentExpression;
+}
+
+function calculate() {
+    try {
+    const result = eval(currentExpression);
+    display.value = result;
+    currentExpression = '';
+    } catch (error) {
+    display.value = 'Error';
+    }
+}
+
+function clearDisplay() {
+    currentExpression = '';
+    display.value = '';
+}
+
+
+</script>
+
+</body>
+</html>

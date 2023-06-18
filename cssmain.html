@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlitterSapphire</title>
+  <link rel="stylesheet" href="final_css.css">
+</head>
+<body>
+  <div id="wrap">
+    <div class="header">
+        <!-- -----------상단 메뉴 시작------------------------- -->
+        <div id="alramtop">
+            <div class="toptopcontainer">
+                <div class="toptopcontent">
+                    <span class="sentence">별땅 출시예정</span>
+                    <span class="sentence">9/6일 팀 왈도가 간다</a></span>                   
+                </div>
+            </div>
+        </div>
+
+
+        <div id="top_menu">
+            <div id="top-wrap">
+              <a href="./mainmain.html"><img src="./myload.png" title="Home" width="80px"></a>  
+              <nav>
+                <ul class="innavul">
+                    <li class="innavulli"><a href="htmlmain.html">HTML</a>
+                        <ul>
+                            <li><a href="htmlmain.html">html1</a></li>
+                            <li><a href="htmlmain2.html">html2</a></li>
+                        </ul>
+                    </li>
+                    <span>/</span>
+                    <li class="innavulli"><a href="cssmain.html">CSS</a>
+                        <ul>
+                            <li><a href="cssmain.html">css1</a></li>
+                        </ul>
+                    </li>
+                    <span>/</span>
+                    <li  class="innavulli"><a href="jsmain.html">Java Script</a>
+                        <ul>
+                            <li><a href="jsmain.html">js1</a></li>
+                            <li><a href="jsmain2.html">js2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+                <div class="search-container">
+                    <input type="text" placeholder="검색" class="search-input">
+                    <button class="search-button">
+                        <img src="search.png" id="searchimage"  width="30px">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    <div id="root">
+      <div id="container">
+      
+      <div id="left-container">
+      
+      </div>
+
+      <div id="midcontainer">
+          <div>
+              <h1> CSS 1페이지다.</h1>
+              <h2>안녕하신가! 힘세고 강한 아침, 만일 내게 물어본다면 나는 css페이지.</h2><br>
+              <h3>CSS는 HTML문서를 시각적으로 꾸미는 역할을 한다. 일괄적으로 적용할수 있으며 외부에서 적용하는것이기 때문에 보다 간편하게 적용할수 있다. 이때 필요한 필수명칭을 잠깐 설명하겠다.
+              </h3>
+              <table border="1">
+                  <thead>
+                      <tr>
+                          <th>요소</th>
+                          <th style="width: 500px;">설명</th>
+                          <th>실행</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr> 
+                          <td> &lt; 선택자 &gt;</td>
+                          <td> 
+                              <br> CSS는 외부 스타일시트이다. 따라서 HTML에 스타일을 적용할때 요소에 접근해줘야한다. 이때 사용하는것이 선택자이다. 
+                              <br>너도 교수님이 이름을 불러야 대답하지 않나?
+                          </td>
+                          <td> <button id="SelB"></button> </td>
+                      </tr>
+                      <tr> 
+                          <td> &lt; 속성 &gt;</td>
+                          <td> 선택자로 대상을 지정해줬으면 본격적으로 스타일을 지정해줘야겠지. 이때 속성을 줘서 스타일을 변경할수 있다. 예를들어 color 속성을 통해 색상을 변경하거나 font-size로 폰트 크기를 변경할수있다.</td>
+                          <td> <button id="PropB"></button> </td>
+                      </tr>
+                      <tr> 
+                          <td> &lt; 속성값 &gt; </td>
+                          <td> 속성을 정해줬다면 속성값도 줘야겠지. 앞서 설명한 color 속성에 속성값으로 blue로 정의하고 font-size를 5px로 정의하면 5픽셀짜리 퍼런 글씨가 나온다!</td>
+                          <td> <button id="ProVB"></button> </td>
+                      </tr>
+                      <tr>
+                        <td>&lt; 선언  &gt;</td>
+                        <td>선언은 속성과 속성값을 결합하여 스타일을 지정하는 부분이다. 속성도 속성값도 선언의 중괄호('{}')안에서 아늑하게 지내겠지. 각각 세미콜론으로 구분한다. 끝에 세미콜론을 빼먹는 실수는 하지마라.</td>
+                        <td> <button id="DecB"></button> </td>
+                      </tr>
+                  </tbody>
+              </table>
+              <h2>요소</h2>
+              <table border="1">
+                  <thead>
+                      <tr>
+                          <th>버튼을 눌러 생김새를 보자.</th>
+                          <th style="width: 500px;">간단한 예시다.</th>
+                          
+                      </tr>
+                      <tr>
+                        <td>html에서 p를 선택해 색을 빨간색으로 폰트 크기를 9px로 정의하는 css다.</td>
+                        <td style="font-size: 30px;">
+                            <span class="Sel">p</span>
+                            <span class="Dec">{</span>
+                            <span class="Prop">color:</span>
+                            <span class="ProV">red</span>
+                            <span class="Dec">;</span>
+                            <span class="Prop"> pont-size:</span>
+                            <span class="ProV">9px</span>
+                            <span class="Dec">;</span>
+                            <span class="Dec">}</span>
+                          </td>
+                      </tr>
+                  
+              </table>
+          </div>
+          <div id="examplebox"></div>
+      </div>
+
+      <div id="right-container">
+          
+
+      </div>
+  
+
+      
+      </div>
+  </div> 
+  <div id="footer">
+  
+  </div>
+</div>
+
+
+<script>    
+
+
+// 맨위의 소프트웨어과제마감알려주는 배너 움직이게하는 js코드
+const sentences = document.querySelectorAll('.sentence');
+let index = 0;
+
+function showNextSentence() {
+  sentences.forEach(sentence => {
+  sentence.classList.remove('active');
+});
+
+  sentences[index].classList.add('active');
+  index = (index + 1) % sentences.length;
+}
+
+function startAnimation() {
+  showNextSentence();
+  setInterval(showNextSentence, 3000);
+}
+
+startAnimation();
+//----------------------------------------
+
+const SelBbutton = document.getElementById('SelB');
+const PropBbutton = document.getElementById('PropB');
+const ProVBbutton = document.getElementById('ProVB');
+const DecBbutton = document.getElementById('DecB');
+const SelSpan = document.getElementsByClassName('Sel');
+const PropSpan = document.getElementsByClassName('Prop');
+const ProVSpan = document.getElementsByClassName('ProV');
+const DecSpan = document.getElementsByClassName('Dec');
+
+SelBbutton.addEventListener('click', function() {
+  Array.from(SelSpan).forEach(function(element) {
+    element.style.color = 'red';
+  });
+
+  resetColors([PropSpan, ProVSpan, DecSpan]);
+});
+
+PropBbutton.addEventListener('click', function() {
+  Array.from(PropSpan).forEach(function(element) {
+    element.style.color = 'red';
+  });
+
+  resetColors([SelSpan, ProVSpan, DecSpan]);
+});
+
+ProVBbutton.addEventListener('click', function() {
+  Array.from(ProVSpan).forEach(function(element) {
+    element.style.color = 'red';
+  });
+
+  resetColors([SelSpan, PropSpan, DecSpan]);
+});
+
+DecBbutton.addEventListener('click', function() {
+  Array.from(DecSpan).forEach(function(element) {
+    element.style.color = 'red';
+  });
+
+  resetColors([SelSpan, PropSpan, ProVSpan]);
+});
+
+function resetColors(elementLists) {
+  elementLists.forEach(function(elements) {
+    Array.from(elements).forEach(function(element) {
+      element.style.color = '';
+    });
+  });
+}
+
+
+
+
+</script>
+
+</body>
+</html>
+    
+</body>
+</html>

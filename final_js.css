@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
+	/* overflow: scroll 스크롤이 나오지 않는 문제가 있었는데 #wrap 에서 해결*/ 
+}
+ul, li {
+    list-style-type: none;
+}
+div {
+	color: white;
+	font-family: 'Noto Sans';
+}
+.calculator {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+}
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#result {
+  height: 60px; /* 원하는 높이로 조정 */
+  width: 600px;
+  font-size: 35px; /* 원하는 폰트 크기로 조정 */
+  background-color: #90ffc6;
+  padding: 10px;
+  margin-top: 20px; /* 결과창과의 간격 조정 */
+  text-align: center;
+  align-items: center;
+}
+
+#wrap {
+	background-size: cover;
+	background-position: center;
+	/* position: fixed; 전체 부모요소의 position이 fixed되어있어서 스크롤이 나오지 않았음*/ 
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgb(150,150,150);	
+}
+#header {
+	display: flex;
+	flex-direction: row;
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* margin: 100px; */
+	/* padding: 0 0 0 0px; */
+	/* background-color: yellowgreen; */	
+}
+#alramtop {
+	/* width : 100%; */
+	height : 80px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.toptopcontinaer {
+	width: 200px;
+	height: 80px;
+	overflow: hidden;
+}
+.toptopcontnet {
+	width: 100%; 
+	/* 내부 요소의 너비를 부모 요소와 동일하게 설정 */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.sentence {
+	opacity: 0;
+	transition: opacity 0.5s, transform 0.5s;
+	position: absolute;
+	top: 20px;
+	left : 200px;
+}
+.sentence.active {
+	opacity: 1;
+	/* transition: opacity 0.5s; */
+	transform: translateY(0);
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+#alramtop div {
+	margin: 0 0 0 100px;
+	font-size: 30px;
+}
+#alramtop a {
+	font-size: 30px;
+	text-decoration: none;
+}
+#top_menu {
+	/* display : flex; */
+	/* flex-direction: row; */
+	/* align-items: center; */
+	/* justify-content: flex-start; */	
+	background-color: lightblue;
+}
+#top-wrap {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 80px;
+	/* flex-wrap: nowrap; */
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+	max-width: 300px;
+	margin: 0 100px 0 auto;
+	/* 안에 더들어가는 내용따라 margin 달라질 수도 있 */	
+}
+.search-input {
+	flex: 1;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+.search-button:hover {
+	background-color: gray;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+.search-button {
+	/* background-color: #e50914; */
+	color: #fff;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+    width: 36px;
+    height: 36px;
+}
+#searchimage {
+    position: relative;
+    left: -12px;
+    top: -4px;
+}
+
+
+
+.innavul {
+	margin: 0 0 0 100px;
+	padding: 0px;
+	list-style: none;
+}
+.innavulli {
+	display: inline-block;
+	position: relative;
+	margin : 0 10px 0 10px;
+	padding: 0px;
+	list-style: none;
+}
+/* 상위메뉴 a태그 */
+nav li > a {
+	display: block;
+	padding: 0 10px;
+	color : blue;
+    margin : 20px;
+	font-size: 30px;
+    font-weight: bold;
+    font-style : italic;
+	line-height: 40px;
+	text-decoration: none;
+    box-sizing: border-box;
+}
+/* 하위메뉴 a태그 */
+nav li li a {
+	display: block;
+	padding: 0 10px;
+	background-color: beige;
+    margin : 0px;
+	font-size: 20px;
+    font-weight: bold;
+    font-style : italic;
+	line-height: 40px;
+	text-decoration: none;
+	border: 2px solid black;
+}
+nav ul span {
+	font-size: 30px;
+	color: gray;
+
+}
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; 
+}
+nav ul li:hover > ul {
+    /* :hover은 마우스 커서를 올려놨을 때 나오는 메뉴?
+    inherit는 부모요소의 display 를 상속받음 */
+	display:inherit;
+}
+nav ul ul li {
+	width: 200px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	left:200px;
+}
+/* --------------------- */
+
+button.clicked {
+	background-color: rgb(150,150,150);
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start; 
+	justify-content: center;
+	min-height: 100vh; 
+	/*최소높이를 뷰포트 100%*/
+	
+}
+#left-container {
+    flex-basis: 15%;
+    height: 100vh;
+    background-color: rgb(150,150,150);
+    
+}
+#mid-container {
+	flex-basis: 70%;
+	height: 100vh;
+    background-color: gray;
+	display: flex;
+	flex-direction: row;
+	padding : 20px 0 0 0;
+}
+.tag_explain_button {
+    color: #fff;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+td > span {
+    padding: 0;
+    margin: 0;
+}
+
+#right-container {
+	flex-basis: 15%;
+	height: 100vh;
+	background-color: rgb(150,150,150);
+	
+	
+}
+
+#footer {
+	background-color: rgb(150,150,150);
+	width: 100%;
+	height: 200px;
+
+}

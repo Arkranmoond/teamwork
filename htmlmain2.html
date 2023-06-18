@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmlmain2</title>
+    <link rel="stylesheet" href="final_html.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <!-- -----------상단 메뉴 시작------------------------- -->
+            <div id="alramtop">
+                <div class="toptopcontainer">
+                    <div class="toptopcontent">
+                        <span class="sentence">소프트웨어 개발 실습1 기말 과제 곧 마감!!</span>
+                        <span class="sentence">기간 ~6/19 제출페이지&nbsp;&nbsp;<a href="https://canvas.dongseo.ac.kr/courses/27711/discussion_topics/213481">e-class</a></span>                   
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="top_menu">
+                <div id="top-wrap">
+                    <a href="./mainmain.html"><img src="./myload.png" title="Home" width="80px"></a>
+                    <nav>
+                        <ul class="innavul">
+                            <li class="innavulli"><a href="htmlmain.html">HTML</a>
+                                <ul>
+                                    <li><a href="htmlmain.html">html1</a></li>
+                                    <li><a href="htmlmain2.html">html2</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li class="innavulli"><a href="cssmain.html">CSS</a>
+                                <ul>
+                                    <li><a href="cssmain.html">css1</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li  class="innavulli"><a href="jsmain.html">Java Script</a>
+                                <ul>
+                                    <li><a href="jsmain.html">js1</a></li>
+                                    <li><a href="jsmain2.html">js2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-container">
+                        <input type="text" placeholder="검색" class="search-input">
+                        <button class="search-button">
+                            <img src="search.png" id="searchimage"  width="30px">
+                        <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+            <!-- ---------------------end of #header ----------------    -->
+        
+        <div id="root">
+            <div id="container">
+            
+            <div id="left-container">
+            
+            </div>
+
+            <div id="midcontainer">
+                <div>
+                    <h1> HTML 요소2</h1>
+                    <h2> 꾸미기 태그</h2>
+                    
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th style="width: 160px;">태그</th>
+                                <th>설명</th>
+                                <td>실행 버튼</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td> &lt; em &gt;</td>
+                                <td>강조할 텍스트 명시</td>
+                                <td><button>&lt; em &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; strong &gt;</td>
+                                <td> 중요한 텍스트 명시</td>
+                                <td><button>&lt; strong &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; i &gt; </td>
+                                <td> 텍스트 기울임</td>
+                                <td><button>&lt; i &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; b &gt; </td>
+                                <td> 텍스트 굵게</td>
+                                <td><button>&lt; b &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; small &gt; </td>
+                                <td> 텍스트 작게</td>
+                                <td><button>&lt; small &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; sup &gt; , &lt; sub &gt; </td>
+                                <td> 위아래 첨자</td>
+                                <td><button>&lt; sup &gt;</button>
+                                    <button>&lt; sub &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; u &gt; </td>
+                                <td> 밑줄 </td>
+                                <td><button>&lt; u &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; s &gt; </td>
+                                <td> 취소선 </td>
+                                <td><button>&lt;s  &gt;</button></td>
+                            </tr>                
+                            <tr> 
+                                <td> &lt; blockquote &gt; </td>
+                                <td> 긴 인용문에 사용 </td>
+                                <td><button>&lt; blockquote &gt;</button></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; q &gt; </td>
+                                <td> 짧은 인용문에 사용 </td>
+                                <td><button>&lt;q  &gt;</button></td>
+                            </tr>   
+                            <tr> 
+                                <td> &lt; mark &gt; </td>
+                                <td> 하이라이트 </td>
+                                <td><button>&lt; mark &gt;</button></td>
+                            </tr>          
+                        </tbody>
+                    </table>
+                    
+                    
+                </div>
+                <div id="examplebox" style="font-size: 30px;">abcdefg</div>
+            </div>
+
+            <div id="right-container">
+                
+
+            </div>
+        
+
+            
+            </div>
+        </div> 
+        <div id="footer">
+        
+        </div>
+    </div>
+
+
+<script>    
+
+
+    // 맨위의 소프트웨어과제마감알려주는 배너 움직이게하는 js코드
+    const sentences = document.querySelectorAll('.sentence');
+    let index = 0;
+    
+    function showNextSentence() {
+        sentences.forEach(sentence => {
+        sentence.classList.remove('active');
+    });
+    
+        sentences[index].classList.add('active');
+        index = (index + 1) % sentences.length;
+    }
+    
+    function startAnimation() {
+        showNextSentence();
+        setInterval(showNextSentence, 3000);
+    }
+    
+    startAnimation();
+
+    //--------htmlmain페이지용 요소 테이블에서 실행버튼 누르면 색깔나오게 하기--------------------------------
+
+    const startElementButton = document.getElementById('start_element_button');
+    const attriElementButton = document.getElementById('attri_element_button');
+    const contentElementButton = document.getElementById('content_element_button');
+    
+    const startTag = document.querySelectorAll('.start_tag');
+    const attriTag = document.querySelectorAll('.attri_tag');
+    const contentTag = document.querySelectorAll('.content_tag');
+
+    startElementButton.addEventListener('click', function() {
+        if (startTag[0].style.color === 'red') {
+            startTag.forEach(function(tag) {
+                tag.style.color = '';
+            });
+            startElementButton.textContent = ''; // Remove the check mark text
+        }
+        else {
+            startTag.forEach(function(tag) {
+            tag.style.color = 'red'
+        });
+        startElementButton.textContent = '✓'; // Add the check mark text
+    }
+});
+
+    attriElementButton.addEventListener('click', function() {
+        if (attriTag[0].style.color === 'blue') {
+            attriTag.forEach(function(tag) {
+                tag.style.color = '';
+            });
+            attriElementButton.textContent = ''; // Remove the check mark text
+        }
+        else {
+            attriTag.forEach(function(tag) {
+            tag.style.color = 'blue'
+        });
+        attriElementButton.textContent = '✓'; // Add the check mark text
+    }
+});
+    
+    contentElementButton.addEventListener('click', function() {
+        if (contentTag[0].style.color === 'green') {
+            contentTag.forEach(function(tag) {
+                tag.style.color = '';
+            });
+            contentElementButton.textContent = ''; // Remove the check mark text
+        }
+        else {
+            contentTag.forEach(function(tag) {
+            tag.style.color = 'green'
+        });
+        contentElementButton.textContent = '✓'; // Add the check mark text
+    }
+});
+    //--끝------요소 테이블에서 실행버튼 누르면 색깔나오게 하기--------------------------------
+    
+    // -------전체 페이지용------검색창-----------------------------
+        const searchButton = document.querySelector('.search-button');
+        const searchInput = document.querySelector('.search-input');
+
+        searchButton.addEventListener('click', function() {
+            const searchTerm = searchInput.value;
+            if (searchTerm.trim() !== '') {
+                const searchURL = `results.html?search=${encodeURIComponent(searchTerm)}`;
+                window.location.href = searchURL;
+            }
+        });
+    </script>
+
+</body>
+</html>

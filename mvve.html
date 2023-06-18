@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mvve.css">
+</head>
+<body>
+    <div id="box">
+        <div class="image-container">
+            <img src="pichtml.png" alt="HTML Image">
+            <img src="piccss.png" alt="CSS Image">
+            <img src="picjs.png" alt="JavaScript Image">
+        </div>
+    </div>
+
+
+    <script>
+    const box = document.getElementById('box');
+    const imageContainer = document.querySelector('.image-container');
+
+    function slideImages() {
+    imageContainer.classList.add('slide');
+    imageContainer.classList.add('slide');
+    }
+
+    // Slide images after a delay
+    setTimeout(slideImages, 3000);
+
+    </script>
+</body>
+</html>

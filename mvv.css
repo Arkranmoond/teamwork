@@ -1,0 +1,27 @@
+
+.box {
+    width: 500px;
+    height: 500px;
+    margin-left: 10px;
+    border: 5px solid black;
+    
+}
+
+#bg-html {
+    display: flex;
+    background-image: url('./pichtml.png');
+    width: 500px;
+    height: 500px;
+}
+#bg-css {
+    display: flex;
+    background-image: url('./piccss.png');
+    width: 500px;
+    height: 500px;
+}
+#bg-js {
+    display: flex;
+    background-image: url('./picjs.png');
+    width: 500px;
+    height: 500px;
+}

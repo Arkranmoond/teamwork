@@ -1,0 +1,36 @@
+<table border="1">
+                        <thead>
+                            <tr>
+                                <th>요소</th>
+                                <th>실행</th>
+                                <th style="width: 500px;">설명</th>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td> 시작,종료 태그</td>
+                                <td> 
+                                    <button class="tag_explain_button" id="start_element_button"></button>
+                                </td>
+                                <td rowspan="3" style="font-size: 25px;">
+                                    <span class="start_tag">&nbsp; &lt;p</span>
+                                    <span class="attri_tag">id=&quot;sample&quot;</span>
+                                    <span class="start_tag">&gt;</span>
+                                    <span class="content_tag"> HTML 요소의 구조</span>
+                                    <span class="start_tag"> &lt;/p&gt;</span>
+                                </td>                                
+                            </tr>
+                            <tr> 
+                                <td> 속성</td>
+                                <td>
+                                    <button class="tag_explain_button" id="attri_element_button"></button>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td> 내용 </td>
+                                <td>
+                                    <button class="tag_explain_button" id="content_element_button"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>

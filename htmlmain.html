@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmlmain</title>
+    <link rel="stylesheet" href="final_html.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <!-- -----------상단 메뉴 시작------------------------- -->
+            <div id="alramtop">
+                <div class="toptopcontainer">
+                    <div class="toptopcontent">
+                        <span class="sentence">소프트웨어 개발 실습1 기말 과제 곧 마감!!</span>
+                        <span class="sentence">기간 ~6/19 제출페이지&nbsp;&nbsp;<a href="https://canvas.dongseo.ac.kr/courses/27711/discussion_topics/213481">e-class</a></span>                   
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="top_menu">
+                <div id="top-wrap">
+                    <a href="./mainmain.html"><img src="./myload.png" title="Home" width="80px"></a>
+                    <nav>
+                        <ul class="innavul">
+                            <li class="innavulli"><a href="htmlmain.html">HTML</a>
+                                <ul>
+                                    <li><a href="htmlmain.html">html1</a></li>
+                                    <li><a href="htmlmain2.html">html2</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li class="innavulli"><a href="cssmain.html">CSS</a>
+                                <ul>
+                                    <li><a href="cssmain.html">css1</a></li>
+                                </ul>
+                            </li>
+                            <span>/</span>
+                            <li  class="innavulli"><a href="jsmain.html">Java Script</a>
+                                <ul>
+                                    <li><a href="jsmain.html">js1</a></li>
+                                    <li><a href="jsmain2.html">js2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-container">
+                        <input type="text" placeholder="검색" class="search-input">
+                        <button class="search-button">
+                            <img src="search.png" id="searchimage"  width="30px">
+                        <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+            <!-- ---------------------end of #header ----------------    -->
+        
+        <div id="root">
+            <div id="container">
+            
+            <div id="left-container">
+            
+            </div>
+
+            <div id="midcontainer">
+                <div>
+                    <h1> HTML 요소</h1>
+                    
+                    
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>요소</th>
+                                <th style="width: 500px;">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td> &lt; !DOCTYPE html &gt;</td>
+                                <td>문서 형식 선언 
+                                    <br> HTML 문서의 종류와 버전을 알리기 위한 선언
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; head &gt;</td>
+                                <td> 제목, 스크립트 및 스타일 시트와 같은 문서에 대한 기계 판독 가능 정보(메타데이터)를 포함합니다. </td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; body &gt; </td>
+                                <td> HTML 문서의 내용을 나타냅니다. 문서에는 이러한 요소가 하나만 있을 수 있습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div>
+                    <h2>  HTML의 요소</h2>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>요소</th>
+                                <th>실행</th>
+                                <th style="width: 500px;">설명</th>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td> 시작,종료 태그</td>
+                                <td> 
+                                    <button class="tag_explain_button" id="start_element_button"></button>
+                                </td>
+                                <td rowspan="3" style="font-size: 25px;">
+                                    <span class="start_tag">&nbsp; &lt;p</span>
+                                    <span class="attri_tag">id=&quot;sample&quot;</span>
+                                    <span class="start_tag">&gt;</span>
+                                    <span class="content_tag"> HTML 요소의 구조</span>
+                                    <span class="start_tag"> &lt;/p&gt;</span>
+                                </td>                                
+                            </tr>
+                            <tr> 
+                                <td> 속성</td>
+                                <td>
+                                    <button class="tag_explain_button" id="attri_element_button"></button>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td> 내용 </td>
+                                <td>
+                                    <button class="tag_explain_button" id="content_element_button"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    
+                    <div>
+                    <h2>단락 태그</h2>
+                    <h4>문서 내용 작성 시 가장 기본적인 단락 작성</h4>
+                    
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>태그</th>
+                                <th style="width: 500px;">설명</th>
+                                <th>실행</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="h-tag"> 
+                                <td> &lt; h &gt;</td>
+                                <td> &lt; h1 &gt; ~ &lt; h6 &gt; 숫자가 낮을수록 높은 수준의 제목을 표현합니다.</td>
+                                <td> 
+                                    <h1>&lt; h1 &gt;</h1>
+                                    <h2>&lt; h2 &gt;</h2>
+                                    <h3>&lt; h3 &gt;</h3>
+                                    <h4>&lt; h4 &gt;</h4>
+                                    <h5>&lt; h5 &gt;</h5>
+                                    <h6>&lt; h6 &gt;</h6>
+                                </td>
+                                
+                            </tr>
+                            <tr> 
+                                <td> &lt; p &gt; </td>
+                                <td> 단락태그 <br>
+                                    문단별로 나눌 때 사용함</td>
+                                <td></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; br &gt;  </td>
+                                <td> 줄바꿈 태그
+                                    <ul> 줄바꿈시 사용함</ul>
+                                </td>
+                                <td> <br></td>
+                            </tr>
+                            <tr> 
+                                <td> &lt; hr &gt;  </td>
+                                <td> 가로줄 태그</td>
+                                <td> a<hr>b </td>
+                            </tr>
+                            <tr> 
+                                <td> &amp;nbsp  </td>
+                                <td> 공백 엔티티 코드
+                                    <ul> 한 칸은 스페이스바로 띄워지지만
+                                        두 칸 이상은 공백 엔티티 코드로 띄워야합니다.
+                                    </ul>
+                                </td>
+                                <td> a&nbsp;&nbsp;&nbsp;b</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="right-container">
+                
+
+            </div>
+        
+
+            
+            </div>
+        </div> 
+        <div id="footer">
+        
+        </div>
+    </div>
+
+
+<script>    
+
+
+    // 맨위의 소프트웨어과제마감알려주는 배너 움직이게하는 js코드
+    const sentences = document.querySelectorAll('.sentence');
+    let index = 0;
+    
+    function showNextSentence() {
+        sentences.forEach(sentence => {
+        sentence.classList.remove('active');
+    });
+    
+        sentences[index].classList.add('active');
+        index = (index + 1) % sentences.length;
+    }
+    
+    function startAnimation() {
+        showNextSentence();
+        setInterval(showNextSentence, 3000);
+    }
+    
+    startAnimation();
+
+    //--------htmlmain페이지용 요소 테이블에서 실행버튼 누르면 색깔나오게 하기--------------------------------
+
+    const startElementButton = document.getElementById('start_element_button');
+    const attriElementButton = document.getElementById('attri_element_button');
+    const contentElementButton = document.getElementById('content_element_button');
+    
+    const startTag = document.querySelectorAll('.start_tag');
+    const attriTag = document.querySelectorAll('.attri_tag');
+    const contentTag = document.querySelectorAll('.content_tag');
+
+    startElementButton.addEventListener('click', function() {
+        if (startTag[0].style.color === 'red') {
+            startTag.forEach(function(tag) {
+                tag.style.color = '';
+            });
+            startElementButton.textContent = ''; // Remove the check mark text
+        }
+        else {
+            startTag.forEach(function(tag) {
+            tag.style.color = 'red'
+        });
+        startElementButton.textContent = '✓'; // Add the check mark text
+    }
+});
+
+    attriElementButton.addEventListener('click', function() {
+        if (attriTag[0].style.color === 'blue') {
+            attriTag.forEach(function(tag) {
+                tag.style.color = '';
+            });
+            attriElementButton.textContent = ''; // Remove the check mark text
+        }
+        else {
+            attriTag.forEach(function(tag) {
+            tag.style.color = 'blue'
+        });
+        attriElementButton.textContent = '✓'; // Add the check mark text
+    }
+});
+    
+    contentElementButton.addEventListener('click', function() {
+        if (contentTag[0].style.color === 'green') {
+            contentTag.forEach(function(tag) {
+                tag.style.color = '';
+            });
+            contentElementButton.textContent = ''; // Remove the check mark text
+        }
+        else {
+            contentTag.forEach(function(tag) {
+            tag.style.color = 'green'
+        });
+        contentElementButton.textContent = '✓'; // Add the check mark text
+    }
+});
+    //--끝------요소 테이블에서 실행버튼 누르면 색깔나오게 하기--------------------------------
+    
+    // -------전체 페이지용------검색창-----------------------------
+        const searchButton = document.querySelector('.search-button');
+        const searchInput = document.querySelector('.search-input');
+
+        searchButton.addEventListener('click', function() {
+            const searchTerm = searchInput.value;
+            if (searchTerm.trim() !== '') {
+                const searchURL = `results.html?search=${encodeURIComponent(searchTerm)}`;
+                window.location.href = searchURL;
+            }
+        });
+    </script>
+
+</body>
+</html>
